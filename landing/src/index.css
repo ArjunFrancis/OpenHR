@@ -1,0 +1,6 @@
+/* Basic Tailwind and landing page styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0a2540, #065e54);
+}
