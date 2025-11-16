@@ -4,3 +4,11 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #0a2540, #065e54);
 }
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+/* You can add small global styles below if required */

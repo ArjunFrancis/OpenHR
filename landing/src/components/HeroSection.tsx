@@ -1,15 +1,66 @@
-import React from 'react';
-export default function HeroSection() {
+import React from "react";
+import { AnimatedLamp } from "./AnimatedLamp";
+import { GithubIcon } from "lucide-react";
+
+export function HeroSection() {
+  const scrollToDemo = () => {
+    document.getElementById("demo")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
-    <section className="flex flex-col items-center justify-center py-24 bg-gradient-to-b from-teal-900 to-blue-900 text-white">
-      <h1 className="text-6xl font-bold mb-6">OpenHR</h1>
-      <h2 className="text-2xl font-semibold mb-8">Match With Exceptional <span className="text-cyan-300">Co-founders</span>, Instantly</h2>
-      <p className="max-w-xl mb-10 text-center text-gray-200">Open source talent matching for founders, visionaries, builders</p>
-      <a href="#talentpool" className="rounded-md bg-cyan-500 px-8 py-4 text-lg font-semibold text-white hover:bg-cyan-700 mb-4">Join the Open Talent Pool</a>
-      <a href="#demo" className="rounded-md border border-gray-300 px-8 py-4 text-lg font-semibold text-cyan-300 mb-4">See OpenHR in Action</a>
-      {/* Animated lamp here */}
-      <div className="mt-8">
-        {/* Insert AnimatedLamp component here if needed */}
+    <section className="relative min-h-screen bg-slate-950 flex items-center justify-center overflow-hidden">
+      {/* Animated Lamp Background */}
+      <AnimatedLamp />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
+        {/* OpenHR Logo Overlay on Lamp */}
+        <div className="mb-8">
+          <h1 className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-brand-cyan via-brand-teal to-brand-blue bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
+            OpenHR
+          </h1>
+        </div>
+
+        {/* Headline */}
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Match With Exceptional
+          <br />
+          <span className="bg-gradient-to-r from-brand-cyan via-brand-teal to-brand-cyan bg-clip-text text-transparent">
+            Co-founders, Instantly
+          </span>
+        </h2>
+
+        {/* Subheading */}
+        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          Open source talent matching for founders, visionaries, builders
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <button className="group relative px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-teal hover:from-brand-cyan/90 hover:to-brand-teal/90 text-slate-900 font-semibold rounded-full transition-all shadow-lg shadow-brand-cyan/50 hover:shadow-brand-cyan/70 hover:scale-105">
+            <span className="relative z-10">Join the Open Talent Pool</span>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-brand-cyan to-brand-teal opacity-0 group-hover:opacity-100 blur-xl transition-opacity" />
+          </button>
+
+          <button
+            onClick={scrollToDemo}
+            className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full transition-all border-2 border-brand-cyan/30 hover:border-brand-cyan/60 hover:shadow-lg hover:shadow-brand-cyan/20"
+          >
+            See OpenHR in Action
+          </button>
+        </div>
+
+        {/* GitHub Link */}
+        <a
+          href="https://github.com/openhr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center space-x-2 text-gray-400 hover:text-brand-cyan transition-colors"
+        >
+          <GithubIcon className="w-5 h-5" />
+          <span>Star us on GitHub</span>
+        </a>
       </div>
     </section>
   );

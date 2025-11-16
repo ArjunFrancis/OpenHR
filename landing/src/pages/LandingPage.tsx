@@ -1,16 +1,17 @@
-import React from 'react';
-export default function LandingPage() {
+import React from "react";
+import { Navigation } from "../components/Navigation";
+import { HeroSection } from "../components/HeroSection";
+import { SyncSkillsSection } from "../components/SyncSkillsSection";
+import { VideoSection } from "../components/VideoSection";
+import { Footer } from "../components/Footer";
+
+export function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-900 to-blue-900 p-0 m-0">
-      {/* Navigation */}
+    <div className="min-h-screen bg-gray-900">
       <Navigation />
-      {/* Hero Section */}
       <HeroSection />
-      {/* Sync Skills Section */}
       <SyncSkillsSection />
-      {/* Video Section */}
       <VideoSection />
-      {/* Footer */}
       <Footer />
     </div>
   );
