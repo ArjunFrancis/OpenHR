@@ -1,5 +1,7 @@
 # 🚀 OpenHR
 
+MVP Built for a Hackathon Project.
+
 Open-source platform connecting founders with technical co-founders through intelligent skill matching.
 
 ## 🎯 Problem
